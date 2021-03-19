@@ -1,0 +1,39 @@
+.center{
+    text-align: center;
+}
+
+.left {
+    text-align: left;  /* 文章を左寄せする(※) */
+    float: left;     /* 左端に寄せて、後続を右側へ回り込ませる */
+    color : blue;
+ }
+ 
+ .right {
+    text-align: right; /* 文章を右寄せする */
+ }
+
+ h1{
+     font-family: 'HGP行書体',serif;
+     color: #008000;
+     margin-right: 20px;
+ }
+
+ body{
+    writing-mode: vertical-rl;
+    background-image: url(image/paper05-768x480.jpg)
+ }
+ input{
+    writing-mode: vertical-rl;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    writing-mode: initial;
+    margin-right: -185px
+ }
+
+ button{
+    writing-mode: vertical-rl;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    writing-mode: initial;
+    margin-right: -40px 
+ }

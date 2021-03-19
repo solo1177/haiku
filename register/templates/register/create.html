@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>俳句の追加ページ</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style.css' %}" >
+</head>
+<body>
+<h1>俳句の追加</h1>
+<form action="{% url 'register:create' %}" method="POST">
+{% csrf_token %}
+<p><input type="text" name="kamigo" maxlength="5" placeholder="上五"></p>
+<p><input type="text" name="nakasiti" maxlength="7" placeholder="中七"></p>
+<p><input type="text" name="simogo" maxlength="5" placeholder="下五"></p>
+<p><input type="text" value="{{ user.last_name }}&nbsp{{ user.first_name }}" name="haijin" placeholder="俳人名" readonly></p>
+<p><input type="hidden" value="{{ user.id }}" name="haiku_id" placeholder="俳句id" readonly></p>
+<br/>
+<p><input type="submit" value="登録する"></p>
+</form>
+<a href="{% url 'register:index' %}">一覧へ</a>
+</body>
+</html>
